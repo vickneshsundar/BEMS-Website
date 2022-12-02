@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Online</title>
+    <style>
+        #Apply{border:solid 1px;width: 100%;padding: 150px; align-content: center;background-color: rgb(235, 166, 200);color: whitesmoke;}
+    </style>
+</head>
+    <body>
+        <div style="display:grid;grid-template-columns:40% 120%;">
+        <div id="Apply">
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WELCOME<br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to</span></h3>
+            <br>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;M.VERVE<br><span style="font-size:smaller;">inspired applications</span></h1>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To connect with us<br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;please enter the details</span></p>
+        </div>
+        <div style="border:solid 1px white;width: 50%;background-color: white;">
+            <h2>Create an account</h2>
+        <form onsubmit="myFunction()">
+            <div id="p1" style="display:grid;grid-template-columns: auto auto auto;">
+            <div>
+            <lab>First Name</lab>
+            <br>
+            <input type="text" placeholder="First Name" id="app1" style="border-style:outset;width:70%;padding: 5px;">
+            </div>
+            <div>
+            <lab>Last Name</lab>
+            <br>
+            <input type="text" placeholder="Last Name" id="app2" style="border-style:outset;width:70%;padding: 5px;">
+            </div>
+            <div>
+            <lab>Age</lab>
+            <br>
+            <input type="number" placeholder="18-54" style="border-style:outset;width:70%;padding: 5px;">
+            </div>
+            </div>
+            <br><br>
+        <div id="p2" style="display:grid;grid-template-columns: auto auto;">
+            <div>
+            MobileNumber:<span id="Mobile" style="color: red;"></span>
+            <br>
+            <input type="tel" placeholder="**** **** **" id="app3" style="width:80%;padding: 5px; border-style:outset;">
+            </div>
+            <div>
+            <lab>Email ID</lab>
+            <br>
+            <input type="email" placeholder="abc@xxx.zzz" style="width:80%;padding: 5px;border-style:outset;">
+            </div>
+        </div>
+        <br><br>
+        <lab>Description</lab>
+        <br>
+        <textarea rows="10" cols="103" style="border-style:outset;"></textarea>Max.150Characters
+        <br><br>
+        <div id="p3" style="display:grid;grid-template-columns: auto auto;">
+        <div>
+            <lab>Password</lab>
+            <br>
+            <input type="password" placeholder="please enter password" id="app4" style="width:80%;padding: 5px;border-style:outset;"required>
+        </div>
+        <div>
+            <lab>Confirm Password</lab>
+            <br>
+            <input type="password" placeholder="please re-enter password" id="app5" style="width:80%;padding: 5px;border-style:outset;"required>
+        </div>
+        </div>
+        <br><br>
+        <div style="text-align: center;">
+        <input type="reset" value="RESET" id="app6" style="border-radius:15px;">
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <input type="submit" value="SUBMIT" id="app7" style="border-radius:15px;">
+    </div>
+        </form>
+    </div>
+    </div>
+    <script>
+        function myFunction(){
+		
+        const a=document.getElementById("app1").value 
+        const b=document.getElementById("app2").value
+        const c=document.getElementById("app3").value
+        const d=document.getElementById("app4").value
+        const e=document.getElementById("app5").value
+
+		
+        if(a.length<=0 && b.length<=0){
+            alert("Please enter the first name and last name")
+			return false;
+        }
+        else if(c.length<=0){
+            alert("please enter your mobile number")
+			return false;
+        }
+        else if(c.length<10){
+            document.getElementById("Mobile").innerHTML="mobile number should not be less 10 characters"
+			return false;
+        }
+        else if(d!==e){
+            alert("password doesn't match")
+			return false;
+        }
+        else{
+            alert("Successfully submitted")
+			return true;
+        }
+    }
+    </script>
+    </body>
+</html>

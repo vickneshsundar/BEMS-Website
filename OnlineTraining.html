@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/43df530aea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Project.css">
+    <style>
+        #section {
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-row-gap: 50px;
+        }
+
+        section h1 {
+            position: absolute;
+            left: 90%;
+        }
+
+        .helo {
+            background-color: rgb(185, 168, 168);
+            width: 70%;
+            height: 500px;
+            overflow-x: scroll;
+            overflow-y: scroll;
+            position: absolute;
+            top: -1000px;
+            transition: 0.6s;
+        }
+
+        .helo.display {
+            top: 50px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body style="background-color:bisque;">
+    <marquee behaviour="scroll" direction="left" style="padding: 10px;
+        background-color: darkorange;">Our best offer ever!!Summer Special-Get courses at 22499 only.<span style="color:blue ;"><a href="#">Read more!</a></span></marquee>
+        <div id="A">
+            <div id="title">
+            <h4>Email:besanttechnology@gmail.com</h4>
+            <h4>Contact:+91 9025741101</h4>
+        </div>
+        <div id="B">
+            <i class="fa-brands fa-facebook"><a target="_blank" href="https://www.facebook.com/BesantTechnologiesOmr/" style="text-decoration:none;">facebook</a></i>
+            <i class="fa-brands fa-twitter"><a target="_blank" href="https://twitter.com/besanttech?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="text-decoration:none;">twitter</a></i>
+            <i class="fa-brands fa-instagram"><a target="_blank" href="https://www.instagram.com/besant_technologies/?hl=en" style="text-decoration:none;">instagram</a></i>
+            <i class="fa-brands fa-linkedin"><a target="_blank" href="https://in.linkedin.com/company/besant-technologies" style="text-decoration:none;">linkedin</a></i>
+        </div>
+        </div>
+        <br>
+    <section>
+        <h1 class="include"><i class="fa fa-shopping-cart"></i><span id="item-count"></span></h1>
+        <input type="text" placeholder="Filter" id="filter" style="width:80%;padding:10px" onkeyup="search()">
+    </section>
+    <br><br>
+    <div id="section">
+        <div class="item">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png"
+                style="width:50%;height: 150px;">
+            <p>Lorem ipsum dolor sit<br> amet consectetur adipisicing<br> elit. Similique, error!</p>
+            <h3 class="class-title"><strong>JAVA</strong></h3>
+            <p>Cost:Rs.35,000</p>
+            <button id="cart">Add-to-Cart</button>
+        </div>
+        <div class="item">
+            <img src="https://www.freecodecamp.org/news/content/images/2020/05/Python-language.png"
+                style="width:50%;height: 150px;">
+            <p>Lorem ipsum dolor sit<br> amet consectetur adipisicing<br> elit. Similique, error!</p>
+            <h3 class="class-title"><strong>PYTHON</strong></h3>
+            <p>Cost:Rs.35,000</p>
+            <button id="cart">Add-to-Cart</button>
+        </div>
+        <div class="item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+                style="width:50%;height: 150px;">
+            <p>Lorem ipsum dolor sit<br> amet consectetur adipisicing<br> elit. Similique, error!</p>
+            <h3 class="class-title"><strong>HTML</strong></h3>
+            <p>Cost:Rs.7000</p>
+            <button id="cart">Add-to-Cart</button>
+        </div>
+        <div class="item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                style="width:50%;height: 150px;">
+            <p>Lorem ipsum dolor sit<br> amet consectetur adipisicing<br> elit. Similique, error!</p>
+            <h3 class="class-title"><strong>CSS</strong></h3>
+            <p>Cost:Rs.7000</p>
+            <button id="cart">Add-to-Cart</button>
+        </div>
+        <div class="item">
+            <img src="https://pimages.toolbox.com/wp-content/uploads/2022/04/26162218/AWS.png"
+                style="width:50%;height: 150px;">
+            <p>Lorem ipsum dolor sit<br> amet consectetur adipisicing<br> elit. Similique, error!</p>
+            <h3 class="class-title"><strong>AWS</strong></h3>
+            <p>Cost:Rs.25,000</p>
+            <button id="cart">Add-to-Cart</button>
+        </div>
+        <div class="item">
+            <img src="https://orangematter.solarwinds.com/wp-content/uploads/2022/03/DevOps-lifecycle-capabilities-1024x621.png"
+                style="width:50%;height: 150px;">
+            <p>Lorem ipsum dolor sit<br> amet consectetur adipisicing<br> elit. Similique, error!</p>
+            <h3 class="class-title"><strong>DEVOPS</strong></h3>
+            <p>Cost:Rs.30,000</p>
+            <button id="cart">Add-to-Cart</button>
+        </div>
+    </div>
+
+    <main class="helo">
+
+    </main>
+
+    <script>
+        function search() {
+            const input = document.getElementById("filter").value.toUpperCase()
+            const cart = document.getElementsByClassName("item")
+            for (let i = 0; i < cart.length; i++) {
+                var title = cart[i].querySelector(".class-title")
+                if (title.innerText.toUpperCase().indexOf(input) > -1) {
+                    cart[i].style.display = ""
+                }
+                else {
+                    cart[i].style.display = "none"
+                }
+            }
+        }
+        const butt = document.getElementsByTagName("button")
+        const select = document.querySelector(".helo")
+        const n = document.querySelector("h1")
+        var c=document.getElementById("item-count")
+        var count=1;
+        for (var action of butt) {
+
+            action.addEventListener("click", (adding) => {
+                var parent = adding.target.parentNode;
+                //cloneNode -->
+                var clone = parent.cloneNode(true)
+                clone.lastElementChild.innerText = "Book-Now"
+                select.appendChild(clone)
+                console.log(select.length);
+                c.innerHTML=count;
+                count++;
+
+                if (clone) {
+                    n.onclick = function () {
+                        select.classList.toggle("display")
+                    }
+                }
+
+            })
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

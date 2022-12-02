@@ -1,0 +1,52 @@
+#title{display: grid;grid-template-columns: 25% 25%;}
+        #A{display: grid;grid-template-columns:78% 22%;padding:10px;background-color: black;color: white;}
+        #title h4:hover{color: red;}
+        #E a{text-decoration: none;color: black;font-size: large;}
+        #C{display: grid;grid-template-columns:30% 60% 30%;background-color: rgb(101, 172, 147);height: 90px;}
+        #centre{position: absolute;bottom: 50px;color: whitesmoke;margin-left: 50px;}
+        #middle{display: grid;grid-template-columns: auto auto auto;grid-gap: 30px;grid-row-gap: 30px;}
+        #secmiddle{display: grid;grid-template-columns: auto auto auto;grid-gap: 30px;}
+        #F{border:solid 1px; text-align: center;box-shadow: 10px 10px 10px 10px grey;} 
+        #G{border:solid 1px; text-align: center;box-shadow: 10px 10px 10px 10px grey;} 
+        #H{border:solid 1px; text-align: center;box-shadow: 10px 10px 10px 10px grey;} 
+        #I{border:solid 1px; text-align: center;box-shadow: 10px 10px 10px 10px grey;} 
+        #J{border:solid 1px; text-align: center;box-shadow: 10px 10px 10px 10px grey;} 
+        #K{border:solid 1px; text-align: center;box-shadow: 10px 10px 10px 10px grey;} 
+        #ab{border:solid 1px;border-radius: 10px;background-color:aqua;}
+        #bc{border:solid 1px;border-radius: 10px;background-color:aqua;}
+        #cd{border:solid 1px;border-radius: 10px;background-color:aqua;}
+        #de{border:solid 1px;border-radius: 10px;background-color:aqua;}
+        #ab:hover{background-color: white;}
+        #bc:hover{background-color: white;}
+        #cd:hover{background-color: white;}
+        #de:hover{background-color: white;}
+        #a1{position: absolute;left: 30px;}
+        #Enquiry{border: solid 1px;width:30%;border-color: white;text-align: center;
+                position: absolute;top: 160px;left:65%;
+            background-color: white;
+        display: none;}
+        #quick{border: solid 1px;width:30%;border-radius: 20px;text-align: center;
+            border-color: white;
+            position: absolute;top: 250px;left: 180px;
+        background-color: white;display: none;}
+        #E a:hover{background-color: white;padding: 10px;height: 100px;color: red;}
+        #rs{display: none;border: solid 1px;width: 100px;padding: 10px;background-color: white;}
+        #open:hover #rs{display: block;}
+        #Apply{border:solid 1px;width: 100%;padding: 150px; align-content: center;background-color: rgb(235, 166, 200);color: whitesmoke;}
+        .HI{display: none;}
+        .OI{display:none}
+        .ZY{display: none;}
+        .YX{display: none;}
+        .btn1{width:100%; 
+            padding: 10px;
+            text-align: left;
+            background-color: orange;}
+        .btn1.active::after{
+            content: "-";
+            position: absolute;
+            left: 90%;
+        }  
+        #section{display: grid;grid-template-columns: 30% 30% 30%;grid-row-gap: 50px;} 
+        section h1{position:absolute;
+                   left: 90%;}
+        
